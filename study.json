@@ -1,0 +1,9 @@
+{
+  "original":"River Grant applicants must upload the eligibility form within five business days of receiving their notice. Applicants awaiting documents may request an extension before the deadline. If the office is closed, file online.",
+  "rewrite":"Upload the eligibility form through the River Grant Portal by 5 p.m. Eastern on the fifth business day after receiving this notice. Start counting on the next business day. Do not count weekends or campus closures. If a required document is missing, request an extension in the portal before the same deadline. A request does not extend the deadline until the office approves it.",
+  "cases":[
+    {"id":"friday","name":"Friday arrival","facts":"You received your notice Friday November 13, 2026. You have all required documents. The campus is open every weekday next week.","expected":{"action":"Upload the form","deadline":"2026-11-20","exception":"None"}},
+    {"id":"missing","name":"Missing document","facts":"You received your notice Monday November 16, 2026. A required document will not be ready. There are no weekday closures.","expected":{"action":"Request extension","deadline":"2026-11-23","exception":"Approval required"}},
+    {"id":"closure","name":"Campus closure","facts":"You received your notice Tuesday November 17, 2026. The campus closes Friday November 20. You have all documents.","expected":{"action":"Upload the form","deadline":"2026-11-25","exception":"Skip closure"}}
+  ]
+}
